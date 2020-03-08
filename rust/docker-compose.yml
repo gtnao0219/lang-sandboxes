@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app:
+    image: rust:1.41
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    command: ["tail", "-f", "/dev/null"]
+    environment:
+      - USER=0
+
